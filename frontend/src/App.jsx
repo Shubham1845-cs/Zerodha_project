@@ -1,30 +1,35 @@
 import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-    return (
-        <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-4">
-            <div className="max-w-md w-full bg-white rounded-xl shadow-2xl p-8 transform transition hover:scale-105">
-                <h1 className="text-4xl font-extrabold text-blue-600 mb-4 text-center">
-                    Zerodha Clone
-                </h1>
-                <p className="text-gray-600 text-lg text-center mb-6">
-                    Initializing the next generation trading platform.
-                </p>
-                <div className="flex justify-center space-x-4">
-                    <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg shadow-md transition-colors">
-                        Frontend Ready
-                    </button>
-                    <div className="bg-green-100 text-green-700 font-semibold py-2 px-6 rounded-lg">
-                        v1.0.0
-                    </div>
-                </div>
-            </div>
-            <footer className="mt-8 text-gray-400 text-sm">
-                Built with React + Tailwind CSS v4
-            </footer>
-        </div>
-    )
+  const [count, setCount] = useState(0)
+
+  return (
+    <>
+      <div>
+        <a href="https://vite.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.jsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+    </>
+  )
 }
 
 export default App
